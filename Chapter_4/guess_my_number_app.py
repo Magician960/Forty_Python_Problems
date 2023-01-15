@@ -19,9 +19,6 @@ name = input("\nHello! What is your name: ").title().strip()
 #Introduce game
 print(f"Well {name}, I am thinking of a number between 1 and 20")
 
-#TESTING ONLY, REMOVE IN FINAL VERSIOn
-print(random_number)
-
 #Number guessing function
 while player_guess != random_number and guess_count != 5:
     player_guess = int(input("\nTake a guess: "))
