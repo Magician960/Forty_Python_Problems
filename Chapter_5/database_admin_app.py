@@ -46,7 +46,7 @@ if user_database[current_user_name]["isAdmin"]:
 else:
     #Ask whether to change user's password
     if input("Would you like to change your password: ").lower() == "yes":
-        new_password = input("What would you like your new password to be: ")
+        new_password = input("What would you like your new password to be: ").strip()
         if len(new_password) < 8:
             print(f"{new_password} not the minimum eight characters.")
         else:
