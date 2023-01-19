@@ -86,7 +86,6 @@ while round_flag:
         print(user_ticket)
         #End loop if user wins
         if user_ticket == winning_balls_list:
-            lost_powerball = False
             print("Winning ticket numbers: ", end="")
             for winning_ball in winning_balls_list:
                 print(winning_ball, end=" ")
