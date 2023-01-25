@@ -61,6 +61,17 @@ class Pet():
             self.boredom -= 6 + random.randint(1,3) - level
         if self.boredom < 0:
             self.boredom = 0
+    #Method to make pet sleep
+    def sleep(self, level):
+        if self.tiredness == 0:
+            print(f"Sorry, {self.name} doesn't want to sleep right now")
+        else:
+            print("Zzzzzz...Zzzzzz...Zzzzzz...")
+            self.tiredness -= 5 + random.randint(1,3) - level
+            if self.tiredness < 0:
+                self.tiredness = 0
+
+
 #Function to retrieve player input given pet is awake
 def get_awake_action():
     print("\nEnter (1) to eat.\nEnter (2) to play.\nEnter (3) to sleep.\nEnter (4) to take a bath.\nEnter (5) to forage for food.")
@@ -100,6 +111,8 @@ while True:
         user_pet.eat(difficulty)
     elif choice == 2:
         user_pet.play(difficulty)
+    elif choice == 3:
+        user_pet.sleep(difficulty)
     
     #Print pet statistics post-action
     print(f"\n Round {round} Summary:")
