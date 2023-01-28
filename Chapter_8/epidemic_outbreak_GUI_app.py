@@ -241,11 +241,11 @@ pop.initial_infection(simulation)
 pop.display_statistics(simulation)
 input("\nPress Enter to begin the simulation.")
 
-for day in range(simulation.sim_duration_days):
+for day in range(simulation.sim_duration_days - 1):
     pop.spread_infection(simulation)
     pop.update(simulation)
     pop.display_statistics(simulation)
     graphics(simulation, pop, sim_canvas)
     sim_window.update()
-    if day != simulation.sim_duration_days - 1:
+    if day != simulation.sim_duration_days - 2:
         sim_canvas.delete("all")
